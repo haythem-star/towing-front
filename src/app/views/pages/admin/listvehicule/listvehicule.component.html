@@ -1,0 +1,106 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Admin</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Liste Vehicules</li>
+
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 stretch-card">
+    <div class="card">
+      <div class="card-body">
+          <!-- Button trigger modal -->
+
+          <!-- Modal -->
+        <h6 class="card-title">Liste Vehicules  <button id="ajout" class="btn btn-primary" (click)="openScrollableModal(scrollableModal)"><i data-feather="truck"></i>&nbsp;Ajouter Vehicule</button></h6>
+
+        <div class="table-responsive">
+
+
+          <table id="dataTableExample" class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Modele</th>
+                <th>Matricule</th>
+                <th>Couleur</th>
+                <th>Action</th>
+            
+              </tr>
+            </thead>
+            <tbody *ngFor="let voiture of voitures ">  <!--<tbody let camion of comions>-->
+              <tr>
+              <td>{{voiture.id}}</td>
+              <td>{{voiture.modele}}</td>
+              <td>{{voiture.matricule}}</td>
+              <td>{{voiture.couleur}}</td>
+            
+              <td>
+              <button type="button" class="btn btn-danger btn-icon"> <i data-feather="eye"></i> </button>&nbsp;
+              <a routerLink="/admin/edit/{{voiture.id}}"  type="button" class="btn btn-warning btn-icon"> <i data-feather="edit"></i> </a>&nbsp;
+              <a routerLink="/admin/delete/{{voiture.id}}}" type="button" class="btn btn-primary btn-icon"> <i data-feather="delete"></i></a>
+              </td>
+              </tr>
+
+            </tbody>
+            <tfoot>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="example">
+          <!-- Button trigger modal -->
+            <!-- Modal -->
+          <ng-template #scrollableModal let-modal>
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ajouter Vehicule</h5>
+              <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+    
+               <!-- Form Ajout  -->
+               <div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label for="exampleInputPlaceholder" class="form-label">Modele</label>
+                        <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPlaceholder" class="form-label">Matricule</label>
+                        <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPlaceholder" class="form-label">Couleur</label>
+                        <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
+                      </div>
+                      
+                </div>
+                  </div>
+                </div>
+              </div>
+                  <!-- Form Ajout  -->
+    
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Annuler</button>
+              <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Ajouter</button>
+            </div>
+          </ng-template>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

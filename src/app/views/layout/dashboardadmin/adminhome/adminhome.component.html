@@ -1,0 +1,199 @@
+<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+  <div>
+    <h4 class="mb-3 mb-md-0">Bienvenue Admin</h4>
+  </div>
+  <div class="d-flex align-items-center flex-wrap text-nowrap">
+    <div class="input-group wd-200 me-2 mb-2 mb-md-0">
+      <button class="btn btn-outline-primary btn-icon calendar" type="button" (click)="d.toggle()">
+        <i data-feather="calendar" appFeatherIcon></i>
+      </button>
+      <input class="form-control border-primary bg-transparent" placeholder="yyyy-mm-dd"
+          name="dp" [(ngModel)]="currentDate" ngbDatepicker #d="ngbDatepicker">
+    </div>
+   
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-xl-12 stretch-card">
+    <div class="row flex-grow-1">
+      <div class="col-md-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Nouveax Clients</h6>
+              
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">8</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-success">
+                    <span>+3.3%</span>
+                    <i data-feather="arrow-up" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+              <div class="col-6 col-md-12 col-xl-7">
+                <div class="mt-md-3 mt-xl-0">
+                  <apx-chart
+                    [series]="customersChartOptions.series"
+                    [chart]="customersChartOptions.chart"
+                    [colors]="customersChartOptions.colors"
+                    [xaxis]="customersChartOptions.xaxis"
+                    [stroke]="customersChartOptions.stroke"
+                    [markers]="customersChartOptions.markers"
+                  ></apx-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Nouveax Demandes</h6>
+         
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">7</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-danger">
+                    <span>-2.8%</span>
+                    <i data-feather="arrow-down" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+              <div class="col-6 col-md-12 col-xl-7">
+                <div class="mt-md-3 mt-xl-0">
+                  <apx-chart
+                    [series]="ordersChartOptions.series"
+                    [chart]="ordersChartOptions.chart"
+                    [colors]="ordersChartOptions.colors"
+                    [plotOptions]="ordersChartOptions.plotOptions"
+                    [xaxis]="ordersChartOptions.xaxis"
+                  ></apx-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Revenues</h6>
+             
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">1500 $</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-success">
+                    <span>+2.8%</span>
+                    <i data-feather="arrow-up" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+              <div class="col-6 col-md-12 col-xl-7">
+                <div class="mt-md-3 mt-xl-0">
+                  <apx-chart
+                    [series]="growthChartOptions.series"
+                    [chart]="growthChartOptions.chart"
+                    [colors]="growthChartOptions.colors"
+                    [xaxis]="growthChartOptions.xaxis"
+                    [stroke]="growthChartOptions.stroke"
+                    [markers]="growthChartOptions.markers"
+                  ></apx-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Nouveaux Chauffeurs</h6>
+             
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">15</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-success">
+                    <span>+50%</span>
+                    <i data-feather="arrow-up" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+              <div class="col-6 col-md-12 col-xl-7">
+                <div class="mt-md-3 mt-xl-0">
+                  <apx-chart
+                    [series]="growthChartOptions.series"
+                    [chart]="growthChartOptions.chart"
+                    [colors]="growthChartOptions.colors"
+                    [xaxis]="growthChartOptions.xaxis"
+                    [stroke]="growthChartOptions.stroke"
+                    [markers]="growthChartOptions.markers"
+                  ></apx-chart>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+          
+        </div>
+        
+      </div>
+      <div class="col-md-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Visiteurs Du Site</h6>
+              
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">187</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-success">
+                    <span>+70%</span>
+                    <i data-feather="arrow-up" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+              <div class="col-6 col-md-12 col-xl-7">
+                <div class="mt-md-3 mt-xl-0">
+                  <apx-chart
+                    [series]="customersChartOptions.series"
+                    [chart]="customersChartOptions.chart"
+                    [colors]="customersChartOptions.colors"
+                    [xaxis]="customersChartOptions.xaxis"
+                    [stroke]="customersChartOptions.stroke"
+                    [markers]="customersChartOptions.markers"
+                  ></apx-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- row -->
+
+<!-- Pie char -->
+
+<!-- Pie char -->
+
+
+
+ <!-- row -->

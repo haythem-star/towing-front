@@ -1,0 +1,67 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Admin</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Historique</li>
+
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 stretch-card">
+    <div class="card">
+      <div class="card-body">
+          <!-- Button trigger modal -->
+
+          <!-- Modal -->
+        <h6 class="card-title">Historique </h6>
+
+        <div class="table-responsive">
+
+
+          <table id="dataTableExample" class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Distance Parcourue</th>
+                <th>Prix</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let hist of historiques ">  <!--<tbody let camion of comions>-->
+              <tr>
+              <td>{{hist.id}}</td>
+              <td>{{hist.kilometres}}</td>
+              <td>{{hist.prix}}</td>
+              <td>{{hist.date_remorquage}}</td>
+         
+              <td>
+              <button type="button" class="btn btn-danger btn-icon"> <i data-feather="eye"></i> </button>&nbsp;
+              <a  type="button" class="btn btn-warning btn-icon"> <i data-feather="edit"></i> </a>&nbsp;
+              <a  type="button" class="btn btn-primary btn-icon"> <i data-feather="delete"></i></a>
+              </td>
+              </tr>
+
+            </tbody>
+            <tfoot>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+    
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+

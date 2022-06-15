@@ -1,0 +1,40 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Admin</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Modifier Profile</li>
+  </ol>
+</nav>
+<div class="row"></div>
+<div class="col-md-6 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h6 class="card-title">Modifier Profile</h6>
+      <form (ngSubmit)="updateEmployee()" class="forms-sample">
+        <div class="form-group row">
+          <label for="name" class="col-md-3 col-form-label text-md-right">Name :</label>
+          <div class="col-md-6">
+          <input type="text" name="name" class="form-control" [(ngModel)]="user.name">
+       </div></div>
+       <div class="form-group row">
+        <label for="name" class="col-md-3 col-form-label text-md-right">Email :</label>
+        <div class="col-md-6">
+        <input type="text" name="email" class="form-control" [(ngModel)]="user.email">
+     </div></div>
+     <div class="form-group row">
+      <label for="name" class="col-md-3 col-form-label text-md-right">Username :</label>
+      <div class="col-md-6">
+      <input type="text" name="username" class="form-control" [(ngModel)]="user.username">
+   </div></div>
+
+        <div class="form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="exampleCheck2">
+          <label class="form-check-label" for="exampleCheck2">
+            Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <button class="btn btn-secondary">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>
