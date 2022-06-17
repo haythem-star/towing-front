@@ -2,7 +2,6 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a routerLink=".">Admin</a></li>
     <li class="breadcrumb-item active" aria-current="page">Historique</li>
-
   </ol>
 </nav>
 
@@ -10,14 +9,12 @@
   <div class="col-md-12 stretch-card">
     <div class="card">
       <div class="card-body">
-          <!-- Button trigger modal -->
+        <!-- Button trigger modal -->
 
-          <!-- Modal -->
-        <h6 class="card-title">Historique </h6>
+        <!-- Modal -->
+        <h6 class="card-title">Historique</h6>
 
         <div class="table-responsive">
-
-
           <table id="dataTableExample" class="table">
             <thead>
               <tr>
@@ -28,20 +25,34 @@
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody *ngFor="let hist of historiques ">  <!--<tbody let camion of comions>-->
+            <tbody *ngFor="let hist of historiques">
+              <!--<tbody let camion of comions>-->
               <tr>
-              <td>{{hist.id}}</td>
-              <td>{{hist.kilometres}}</td>
-              <td>{{hist.prix}}</td>
-              <td>{{hist.dateRemorquage}}</td>
-         
-              <td>
-              <button  class="btn btn-sm btn-info"> <i id="myicon1" class="fa fa-search"></i>Details</button>
-              <button  class="btn btn-sm btn-warning"> <i id="myicon2" class="fa fa-edit"></i>Modifier</button>
-              <button  class="btn btn-sm btn-danger"> <i id="myicon3" class="fa fa-remove"></i>Supprimer</button>
-              </td>
-              </tr>
+                <td>{{ hist.id }}</td>
+                <td>{{ hist.kilometres }}</td>
+                <td>{{ hist.prix }}</td>
+                <td>{{ hist.dateRemorquage }}</td>
 
+                <td>
+                  <button class="btn btn-sm btn-info">
+                    <i id="myicon1" class="fa fa-search"></i>Details
+                  </button>
+                  <button class="btn btn-sm btn-warning">
+                    <i id="myicon2" class="fa fa-edit"></i>
+                    <a routerLink="/admin/edit/{{ user.id }}" type="button"
+                      >Modifier</a
+                    >
+                  </button>
+                  <button class="btn btn-sm btn-danger">
+                    <i id="myicon3" class="fa fa-remove"></i>Supprimer
+                  </button>
+                  <!-- <td>
+                <button type="button" class="btn btn-danger btn-icon"> <i data-feather="eye"></i> </button>&nbsp;
+                <a routerLink="/admin/edit/{{user.id}}"  type="button" class="btn btn-warning btn-icon"> <i data-feather="edit"></i> </a>&nbsp;
+                <a routerLink="/admin/delete/{{user.id}}}" type="button" class="btn btn-primary btn-icon"> <i data-feather="delete"></i></a>
+                </td> -->
+                </td>
+              </tr>
             </tbody>
             <tfoot>
               <tr>
@@ -55,13 +66,7 @@
             </tfoot>
           </table>
         </div>
-
-    
-
-
       </div>
     </div>
   </div>
 </div>
-
-
