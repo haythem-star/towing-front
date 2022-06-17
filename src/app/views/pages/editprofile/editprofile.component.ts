@@ -44,7 +44,7 @@ export class EditProfileComponent implements OnInit {
       this.getVoitureData()
     }
     
-    this.updateEmployee();
+    // this.updateEmployee();
   }
 
   getChauffeurData(){
@@ -98,9 +98,9 @@ export class EditProfileComponent implements OnInit {
       //console.log(res);
       this.data = res;
       this.user = this.data;
-      this.email = this.user.email;
-      this.name = this.user.name;
-      this.username = this.user.username;
+      this.email = this.data.nombreVoitures;
+      this.name = this.user.adresse;
+      this.username = this.data.numTelephone;
       console.log(this.user);
       console.log(this.email);
       console.log(this.name);
