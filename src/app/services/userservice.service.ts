@@ -51,8 +51,8 @@ id:any;
 UpdateUser(id:any, data:any) {
     return this.httpClient.post(environment.apiUrl+'/update/' + id, data );
   }
- DeleteUser() {
-    return this.httpClient.delete(environment.apiUrl+'/delete/' );
+ DeleteUser(id: any) {
+    return this.httpClient.delete(environment.apiUrl+'api/client/del/'+ id );
   }
  
 
