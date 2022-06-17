@@ -46,7 +46,7 @@ id:any;
     return this.httpClient.post(environment.apiUrl+'/ajout/'  );
   }*/
  getUserById(id: any) {
-    return this.httpClient.get(environment.apiUrl+'/users/'+ id);
+    return this.httpClient.get(environment.apiUrl+'api/client/'+ id);
   }
 UpdateUser(id:any, data:any) {
     return this.httpClient.post(environment.apiUrl+'/update/' + id, data );
