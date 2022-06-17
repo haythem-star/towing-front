@@ -13,9 +13,9 @@ export class ChauffeurService {
   getAll(){
     return this.http.get(baseUrl);
   }
-  // get(id: any): Observable<Camion> {
-  //   return this.http.get(`${baseUrl}/${id}`);
-  // }
+  get(id: any) {
+    return this.http.get(`${baseUrl}/${id}`);
+  }
   // create(data: any): Observable<any> {
   //   return this.http.post(baseUrl, data);
   // }

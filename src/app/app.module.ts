@@ -38,6 +38,7 @@ import { EditcamionComponent } from './views/pages/editcamion/editcamion.compone
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditClientComponent } from './views/pages/edit-client/edit-client.component';
 import { EditChauffeurComponent } from './views/pages/edit-chauffeur/edit-chauffeur.component';
+import { EditVoitureComponent } from './views/pages/edit-voiture/edit-voiture.component';
 
 
 
@@ -69,6 +70,7 @@ import { EditChauffeurComponent } from './views/pages/edit-chauffeur/edit-chauff
     HistoriqueComponent,
     EditClientComponent,
     EditChauffeurComponent,
+    EditVoitureComponent,
 
   ],
   imports: [
