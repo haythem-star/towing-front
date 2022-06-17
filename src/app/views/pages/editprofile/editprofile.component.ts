@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/model/user';
 import { UserserviceService } from 'src/app/services/userservice.service';
@@ -9,6 +9,10 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./editprofile.component.scss']
 })
 export class EditProfileComponent implements OnInit {
+  @Input() titre= '';
+  @Input() item1='';
+  @Input() item2='';
+  @Input() item3='';
   id: any;
   data: any;
   email:any;

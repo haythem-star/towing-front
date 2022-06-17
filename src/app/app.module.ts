@@ -36,6 +36,7 @@ import { Router, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditcamionComponent } from './views/pages/editcamion/editcamion.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EditClientComponent } from './views/pages/edit-client/edit-client.component';
 
 
 
@@ -64,7 +65,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ListcamionComponent,
     EditProfileComponent,
     EditcamionComponent,
-    HistoriqueComponent
+    HistoriqueComponent,
+    EditClientComponent,
 
   ],
   imports: [

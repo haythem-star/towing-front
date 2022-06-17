@@ -24,6 +24,7 @@ import { GeoClientComponent } from './views/pages/client/geoclient/geoclient.com
 import { HistoriqueClientComponent } from './views/pages/client/historiqueclient/historiqueclient.component';
 import { EditProfileComponent } from './views/pages/editprofile/editprofile.component';
 import { EditcamionComponent } from './views/pages/editcamion/editcamion.component';
+import { EditClientComponent } from './views/pages/edit-client/edit-client.component';
 
 
 
@@ -62,7 +63,7 @@ const routes: Routes = [
     { path: 'mesdemandes',component: MesdemandesComponent},
     { path: 'geolocalisation',component: GeoClientComponent},
     { path: 'historique',component: HistoriqueClientComponent},
-    { path: 'edit/:id',component: EditProfileComponent},
+    { path: 'edit/:id',component: EditClientComponent},
 
   ]
  },
@@ -83,7 +84,7 @@ const routes: Routes = [
    { path: 'listchauffeur',component: ListchauffeurComponent},
    { path: 'geolocalisation',component: GeolocalisationComponent},
    { path: 'historique',component: HistoriqueComponent},
-   { path: 'edit/:id',component: EditProfileComponent},
+   { path: 'edit/:id',component: EditClientComponent},
    { path: 'editcamion/:id',component: EditcamionComponent},
 
 
