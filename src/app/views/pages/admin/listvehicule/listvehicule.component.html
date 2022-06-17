@@ -13,7 +13,7 @@
           <!-- Button trigger modal -->
 
           <!-- Modal -->
-        <h6 class="card-title">Liste Vehicules  <button id="ajout" class="btn btn-primary" (click)="openScrollableModal(scrollableModal)"><i data-feather="truck"></i>&nbsp;Ajouter Vehicule</button></h6>
+        <h6 class="card-title">Liste Vehicules  <button id="ajout" class="btn btn-primary" (click)="openScrollableModal(scrollableModal)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard link-icon" _ngcontent-kji-c113="" appfeathericon=""><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>&nbsp;Ajouter Vehicule</button></h6>
 
         <div class="table-responsive">
 
@@ -37,9 +37,9 @@
               <td>{{voiture.couleur}}</td>
             
               <td>
-              <button type="button" class="btn btn-danger btn-icon"> <i data-feather="eye"></i> </button>&nbsp;
-              <a routerLink="/admin/edit/{{voiture.id}}"  type="button" class="btn btn-warning btn-icon"> <i data-feather="edit"></i> </a>&nbsp;
-              <a routerLink="/admin/delete/{{voiture.id}}}" type="button" class="btn btn-primary btn-icon"> <i data-feather="delete"></i></a>
+                <button  class="btn btn-sm btn-info"> <i id="myicon1" class="fa fa-search"></i>Details</button>
+                <button  class="btn btn-sm btn-warning"> <i id="myicon2" class="fa fa-edit"></i>Modifier</button>
+                <button  class="btn btn-sm btn-danger"> <i id="myicon3" class="fa fa-remove"></i>Supprimer</button>
               </td>
               </tr>
 

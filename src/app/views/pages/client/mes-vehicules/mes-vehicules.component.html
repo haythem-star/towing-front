@@ -17,7 +17,7 @@
   <div class="col-md-12 stretch-card">
     <div class="card">
       <div class="card-body">
-        <h6 class="card-title">Mes Vehicules</h6>
+        <h6 class="card-title">Mes Vehicules <button id="ajout" class="btn btn-primary" (click)="openScrollableModal(scrollableModal)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard link-icon" _ngcontent-kji-c113="" appfeathericon=""><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>&nbsp;Ajouter Vehicule</button></h6>
         <div class="table-responsive">
           <table id="dataTableExample" class="table">
             <thead>
@@ -26,184 +26,31 @@
                 <th>Modele</th>
                 <th>Matricule</th>
                 <th>Couleur</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
+                <td>1</td>
+                <td>Peugot 206</td>
+                <td>	1045 SO 41</td>
+                <td>	Bleu</td>
+                <td>
+                  <button  class="btn btn-sm btn-info"> <i id="myicon1" class="fa fa-search"></i>Details</button>
+                  <button  class="btn btn-sm btn-warning"> <i id="myicon2" class="fa fa-edit"></i>Modifier</button>
+                  <button  class="btn btn-sm btn-danger"> <i id="myicon3" class="fa fa-remove"></i>Supprimer</button>
+                </td>
               </tr>
               <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
-              </tr>
-              <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-                <td>2009/01/12</td>
-                <td>$86,000</td>
-              </tr>
-              <tr>
-                <td>Cedric Kelly</td>
-                <td>Senior Javascript Developer</td>
-                <td>Edinburgh</td>
-                <td>22</td>
-                <td>2012/03/29</td>
-                <td>$433,060</td>
-              </tr>
-              <tr>
-                <td>Airi Satou</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>33</td>
-                <td>2008/11/28</td>
-                <td>$162,700</td>
-              </tr>
-              <tr>
-                <td>Brielle Williamson</td>
-                <td>Integration Specialist</td>
-                <td>New York</td>
-                <td>61</td>
-                <td>2012/12/02</td>
-                <td>$372,000</td>
-              </tr>
-              <tr>
-                <td>Herrod Chandler</td>
-                <td>Sales Assistant</td>
-                <td>San Francisco</td>
-                <td>59</td>
-                <td>2012/08/06</td>
-                <td>$137,500</td>
-              </tr>
-              <tr>
-                <td>Rhona Davidson</td>
-                <td>Integration Specialist</td>
-                <td>Tokyo</td>
-                <td>55</td>
-                <td>2010/10/14</td>
-                <td>$327,900</td>
-              </tr>
-              <tr>
-                <td>Colleen Hurst</td>
-                <td>Javascript Developer</td>
-                <td>San Francisco</td>
-                <td>39</td>
-                <td>2009/09/15</td>
-                <td>$205,500</td>
-              </tr>
-              <tr>
-                <td>Sonya Frost</td>
-                <td>Software Engineer</td>
-                <td>Edinburgh</td>
-                <td>23</td>
-                <td>2008/12/13</td>
-                <td>$103,600</td>
-              </tr>
-              <tr>
-                <td>Jena Gaines</td>
-                <td>Office Manager</td>
-                <td>London</td>
-                <td>30</td>
-                <td>2008/12/19</td>
-                <td>$90,560</td>
-              </tr>
-              <tr>
-                <td>Quinn Flynn</td>
-                <td>Support Lead</td>
-                <td>Edinburgh</td>
-                <td>22</td>
-                <td>2013/03/03</td>
-                <td>$342,000</td>
-              </tr>
-              <tr>
-                <td>Charde Marshall</td>
-                <td>Regional Director</td>
-                <td>San Francisco</td>
-                <td>36</td>
-                <td>2008/10/16</td>
-                <td>$470,600</td>
-              </tr>
-              <tr>
-                <td>Haley Kennedy</td>
-                <td>Senior Marketing Designer</td>
-                <td>London</td>
-                <td>43</td>
-                <td>2012/12/18</td>
-                <td>$313,500</td>
-              </tr>
-              <tr>
-            <td>Tatyana Fitzpatrick</td>
-                <td>Regional Director</td>
-                <td>London</td>
-                <td>19</td>
-                <td>2010/03/17</td>
-                <td>$385,750</td>
-              </tr>
-              <tr>
-                <td>Michael Silva</td>
-                <td>Marketing Designer</td>
-                <td>London</td>
-                <td>66</td>
-                <td>2012/11/27</td>
-                <td>$198,500</td>
-              </tr>
-              <tr>
-                <td>Paul Byrd</td>
-                <td>Chief Financial Officer (CFO)</td>
-                <td>New York</td>
-                <td>64</td>
-                <td>2010/06/09</td>
-                <td>$725,000</td>
-              </tr>
-              <tr>
-                <td>Gloria Little</td>
-                <td>Systems Administrator</td>
-                <td>New York</td>
-                <td>59</td>
-                <td>2009/04/10</td>
-                <td>$237,500</td>
-              </tr>
-              <tr>
-                <td>Bradley Greer</td>
-                <td>Software Engineer</td>
-                <td>London</td>
-                <td>41</td>
-                <td>2012/10/13</td>
-                <td>$132,000</td>
-              </tr>
-              <tr>
-                <td>Dai Rios</td>
-                <td>Personnel Lead</td>
-                <td>Edinburgh</td>
-                <td>35</td>
-                <td>2012/09/26</td>
-                <td>$217,500</td>
-              </tr>
-              <tr>
-                <td>Jenette Caldwell</td>
-                <td>Development Lead</td>
-                <td>New York</td>
-                <td>30</td>
-                <td>2011/09/03</td>
-                <td>$345,000</td>
-              </tr>
-              <tr>
-                <td>Yuri Berry</td>
-                <td>Chief Marketing Officer (CMO)</td>
-                <td>New York</td>
-                <td>40</td>
-                <td>2009/06/25</td>
-                <td>$675,000</td>
+                <td>2</td>
+                <td>	Renault Clio IV</td>
+                <td>4781 SO 32</td>
+                <td>	Rouge</td>
+                <td>
+                  <button  class="btn btn-sm btn-info"> <i id="myicon1" class="fa fa-search"></i>Details</button>
+                  <button  class="btn btn-sm btn-warning"> <i id="myicon2" class="fa fa-edit"></i>Modifier</button>
+                  <button  class="btn btn-sm btn-danger"> <i id="myicon3" class="fa fa-remove"></i>Supprimer</button>
+                </td>
               </tr>
             </tbody>
             <tfoot>
@@ -217,8 +64,53 @@
               </tr>
             </tfoot>
           </table>
+        
+        
+          <div class="example">
+            <!-- Button trigger modal -->
+              <!-- Modal -->
+            <ng-template #scrollableModal let-modal>
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ajouter Vehicule</h5>
+                <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+      
+                 <!-- Form Ajout  -->
+                 <div class="row">
+                  <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="mb-3">
+                          <label for="exampleInputPlaceholder" class="form-label">Modele</label>
+                          <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPlaceholder" class="form-label">Matricule</label>
+                          <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPlaceholder" class="form-label">Couleur</label>
+                          <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
+                        </div>
+                        
+                  </div>
+                    </div>
+                  </div>
+                </div>
+                    <!-- Form Ajout  -->
+      
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Annuler</button>
+                <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Ajouter</button>
+              </div>
+            </ng-template>
+          </div>
+  
+  
         </div>
       </div>
     </div>
   </div>
-</div>
+  

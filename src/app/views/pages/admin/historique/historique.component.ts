@@ -4,6 +4,7 @@ import { HistoriqueService } from 'src/app/services/historique.service';
 import { TemplateRef } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
+
 const basicModal = {
   htmlCode:
 `<!-- Button trigger modal -->

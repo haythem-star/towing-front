@@ -35,6 +35,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditcamionComponent } from './views/pages/editcamion/editcamion.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -75,6 +76,7 @@ import { EditcamionComponent } from './views/pages/editcamion/editcamion.compone
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule,
 
 
   ],

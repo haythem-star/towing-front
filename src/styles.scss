@@ -33,3 +33,12 @@
 
 // NobleUI styles For RTL
 // @import "./assets/scss/style.rtl.css";
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.fa-search .fa-edit .fa-remove      {
+    font-size: 3px;
+    margin-right: 5px;
+    padding: 8px;
+}

@@ -13,7 +13,8 @@
           <!-- Button trigger modal -->
 
           <!-- Modal -->
-        <h6 class="card-title">Liste Chauffeurs </h6>
+          <h6 class="card-title">Liste Chauffeurs<button id="ajout" class="btn btn-primary" (click)="openScrollableModal(scrollableModal)"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users link-icon" _ngcontent-flu-c113="" appfeathericon=""><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>&nbsp;Ajouter Chauffeur</button></h6>
+
 
         <div class="table-responsive">
 
@@ -37,9 +38,9 @@
               <td>{{chauffeur.numeroTel}}</td>
               <td>Actif</td>
               <td>
-              <button type="button" class="btn btn-danger btn-icon"> <i data-feather="eye"></i> </button>&nbsp;
-              <a routerLink="/admin/edit/{{chauffeur.id}}"  type="button" class="btn btn-warning btn-icon"> <i data-feather="edit"></i> </a>&nbsp;
-              <a routerLink="/admin/delete/{{chauffeur.id}}}" type="button" class="btn btn-primary btn-icon"> <i data-feather="delete"></i></a>
+                <button  class="btn btn-sm btn-info"> <i id="myicon1" class="fa fa-search"></i>Details</button>
+                <button  class="btn btn-sm btn-warning"> <i id="myicon2" class="fa fa-edit"></i>Modifier</button>
+                <button  class="btn btn-sm btn-danger"> <i id="myicon3" class="fa fa-remove"></i>Supprimer</button>
               </td>
               </tr>
 
@@ -57,58 +58,56 @@
           </table>
         </div>
 
-    <div class="example">
-      <!-- Button trigger modal -->
-        <!-- Modal -->
-      <ng-template #scrollableModal let-modal>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ajouter Camion</h5>
-          <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-
-           <!-- Form Ajout  -->
-           <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="mb-3">
-                    <label for="exampleInputPlaceholder" class="form-label">Placeholder</label>
-                    <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPlaceholder" class="form-label">Placeholder</label>
-                    <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPlaceholder" class="form-label">Placeholder</label>
-                    <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPlaceholder" class="form-label">Placeholder</label>
-                    <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPlaceholder" class="form-label">Placeholder</label>
-                    <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
-                  </div>
-
+        <div class="example">
+          <!-- Button trigger modal -->
+            <!-- Modal -->
+          <ng-template #scrollableModal let-modal>
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ajouter Chauffeur</h5>
+              <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+    
+               <!-- Form Ajout  -->
+               <div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label for="exampleInputPlaceholder" class="form-label">Id</label>
+                        <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPlaceholder" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPlaceholder" class="form-label">Mail</label>
+                        <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPlaceholder" class="form-label">Telephone</label>
+                        <input type="text" class="form-control" id="exampleInputPlaceholder" placeholder="Enter Your Name">
+                      </div>
+                 
+    
+                </div>
+                  </div>
+                </div>
               </div>
+                  <!-- Form Ajout  -->
+    
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Annuler</button>
+              <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Ajouter</button>
+            </div>
+          </ng-template>
+        </div>
+    
+    
           </div>
-              <!-- Form Ajout  -->
-
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
-          <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Save changes</button>
-        </div>
-      </ng-template>
-    </div>
-
-
       </div>
     </div>
-  </div>
-</div>
+    

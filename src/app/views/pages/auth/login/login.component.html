@@ -3,56 +3,56 @@
     <div class="card">
       <div class="row">
         <div class="col-md-4 pe-md-0">
-          <div class="auth-side-wrapper" [ngStyle]="{ 'background-image': 'url(https://via.placeholder.com/219x452)' }">
-
-          </div>
+          <img url="https://www.facebook.com/messenger_media?thread_id=100028181055635&attachment_id=1232740134136762&message_id=mid.%24cAAAADOI2gtWHmmBKDGBaRq8s-IzQ" alt="The Image" width="128px" height="128px">
         </div>
         <div class="col-md-8 ps-md-0">
           <div class="auth-form-wrapper px-4 py-5">
-            <a routerLink="." class="nobleui-logo d-block mb-2">Noble<span>UI</span></a>
-            <h5 class="text-muted fw-normal mb-4">Welcome back! Log in to your account.</h5>
+            <a routerLink="." class="nobleui-logo d-block mb-2"><span></span></a>
+            <h5 class="text-muted fw-normal mb-4">Content de te revoir! Connectez-vous à votre compte.</h5>
             <form class="forms-sample" (ngSubmit)="submit()" [formGroup]="form">
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <label for="exampleInputEmail1" class="form-label">Email </label>
                 <input type="text" formControlName="email" name="email" class="form-control"
-                placeholder="Enter email" [ngClass]="{'is-invalid': submitted && f.email.errors}">
+                placeholder="Entrer email" [ngClass]="{'is-invalid': submitted && f.email.errors}">
 
                 <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                   <div *ngIf="f.email.errors.required">
-                    Email is required
+                   E-mail est requis
+
                   </div>
                   <div *ngIf="f.email.errors.email">
-                    Email must be a valid email address
+                    L'e-mail doit être une adresse e-mail valide
                    </div>
               </div>
               </div>
               <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <label for="exampleInputPassword1" class="form-label">Mot de passe
+                </label>
                 <input type="password" formControlName="password" name="password" class="form-control"
-                placeholder="Enter password" [ngClass]="{'is-invalid': submitted && f.password.errors}">
+                placeholder="Entrer mot de passe" [ngClass]="{'is-invalid': submitted && f.password.errors}">
 
                 <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                   <div *ngIf="f.password.errors.required">
-                    Password is required
+                    Mot de passe est requis
+
                   </div>
                   <div *ngIf="f.password.errors.minlength">
-                    Password must be atleast 6 characters
+                    Le mot de passe doit être au moins de 6 caractères
                    </div>
               </div></div>
               <div class="form-check mb-3">
                 <input type="checkbox" class="form-check-input" id="authCheck">
                 <label class="form-check-label" for="authCheck">
-                  Remember me
+                  Souviens- moi
                 </label>
               </div>
               <div>
-                <button type="submit" class="btn btn-primary me-2 mb-2 mb-md-0" >Login</button>
-                <button type="button" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0">
-                  <i class="feather icon-twitter btn-icon-prepend"></i>
-                  Login with twitter
+                <button type="submit" class="btn btn-primary me-2 mb-2 mb-md-0" > Se Connecter
                 </button>
+               
               </div>
-              <a routerLink="/auth/register" class="d-block mt-3 text-muted">Not a user? Sign up</a>
+              <a routerLink="/auth/register" class="d-block mt-3 text-muted">
+                Vous n'êtes pas utilisateur ? S'inscrire</a>
             </form>
           </div>
         </div>

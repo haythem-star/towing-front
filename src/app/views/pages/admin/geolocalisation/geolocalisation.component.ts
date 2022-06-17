@@ -50,8 +50,8 @@ export class GeolocalisationComponent implements OnInit {
 
       marker.bindPopup(`<center>
       <p>
-         <strong>Demande</strong></p></center>
-   <a class="btn btn-primary" type="button" href="https://www.google.com/maps/@33.9183866,8.1224174,13z"></a>
+      
+   <a class="btn btn-primary" type="button" href="https://www.google.com/maps/@33.9183866,8.1224174,13z">Google Maps</a>
        `).openPopup();
 
       let popup = L.popup()

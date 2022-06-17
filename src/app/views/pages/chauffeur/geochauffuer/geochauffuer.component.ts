@@ -45,7 +45,11 @@ export class GeoChauffuerComponent implements OnInit {
       let marker = L.marker(this.latLong,{icon: IconStyleOne}).addTo(mapchauffuer);
 
 
-      marker.bindPopup('<b>My Postion</b>').openPopup();
+      marker.bindPopup(`<center>
+      <p>
+      
+   <a class="btn btn-primary" type="button" href="https://www.google.com/maps/@33.9183866,8.1224174,13z">Google Maps</a>
+       `).openPopup();
 
       let popup = L.popup()
         .setLatLng(this.latLong)
