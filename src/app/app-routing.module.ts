@@ -26,6 +26,7 @@ import { EditProfileComponent } from './views/pages/editprofile/editprofile.comp
 import { EditcamionComponent } from './views/pages/editcamion/editcamion.component';
 import { EditClientComponent } from './views/pages/edit-client/edit-client.component';
 import { EditChauffeurComponent } from './views/pages/edit-chauffeur/edit-chauffeur.component';
+import { EditVoitureComponent } from './views/pages/edit-voiture/edit-voiture.component';
 
 
 
@@ -88,6 +89,7 @@ const routes: Routes = [
    { path: 'edit/:id',component: EditClientComponent},
    { path: 'editcamion/:id',component: EditcamionComponent},
    { path: 'editChauffeur/:id',component: EditChauffeurComponent},
+   { path: 'editVoiture/:id',component: EditVoitureComponent},
 
 
   ]
