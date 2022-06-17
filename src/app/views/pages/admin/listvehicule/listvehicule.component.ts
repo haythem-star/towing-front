@@ -304,7 +304,11 @@ openBasicModal(content: TemplateRef<any>) {
   }
 
   supprimer(id : any){
+    console.log("supprimer methode en : "+ id );
+    
     this.voitureservice.delete(id).subscribe(res=> {
+      console.log("delted : " + res);
+      
       this.getVoitures();
     });
   }
