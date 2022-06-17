@@ -37,6 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditcamionComponent } from './views/pages/editcamion/editcamion.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditClientComponent } from './views/pages/edit-client/edit-client.component';
+import { EditChauffeurComponent } from './views/pages/edit-chauffeur/edit-chauffeur.component';
 
 
 
@@ -67,6 +68,7 @@ import { EditClientComponent } from './views/pages/edit-client/edit-client.compo
     EditcamionComponent,
     HistoriqueComponent,
     EditClientComponent,
+    EditChauffeurComponent,
 
   ],
   imports: [
