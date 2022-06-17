@@ -34,13 +34,18 @@ export class EditProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
-    if(this.typeItem = 1) {
+    console.log(this.typeItem);
+    
+    if(this.typeItem == 1) {
       this.getUserData();
-    }else if (this.typeItem = 2){
+    }
+    else if (this.typeItem == 2){
       this.getCamionData()
-    }else if (this.typeItem = 3){
+    }
+    else if (this.typeItem == 3){
       this.getChauffeurData()
-    }else if (this.typeItem = 4){
+    }
+    else if (this.typeItem == 4){
       this.getVoitureData()
     }
     
