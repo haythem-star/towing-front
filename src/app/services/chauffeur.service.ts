@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 // import { Camion } from '../model/camion';
 
-const baseUrl = 'http://localhost:8000/api/depanneurs';
+const baseUrl = 'http://localhost:8000/api/';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,10 +11,10 @@ export class ChauffeurService {
 
   constructor(private http: HttpClient) { }
   getAll(){
-    return this.http.get(baseUrl);
+    return this.http.get(baseUrl+'depanneurs');
   }
   get(id: any) {
-    return this.http.get(`${baseUrl}/${id}`);
+    return this.http.get(`${baseUrl}depanneur/${id}`);
   }
   // create(data: any): Observable<any> {
   //   return this.http.post(baseUrl, data);
