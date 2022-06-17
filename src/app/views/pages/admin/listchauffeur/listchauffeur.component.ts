@@ -304,4 +304,10 @@ openBasicModal(content: TemplateRef<any>) {
     element.scrollIntoView({behavior: 'smooth'});
   }
 
+  supprimer(id : any){
+    this.chauffeurservice.delete(id).subscribe(res=> {
+      this.getchauffeurs();
+    });
+  }
+
 }

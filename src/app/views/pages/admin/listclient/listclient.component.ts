@@ -303,4 +303,10 @@ openBasicModal(content: TemplateRef<any>) {
     element.scrollIntoView({behavior: 'smooth'});
   }
 
+  supprimer(id : any){
+    this.userservice.DeleteUser(id).subscribe(res=> {
+      this.getuser();
+    });
+  }
+
 }

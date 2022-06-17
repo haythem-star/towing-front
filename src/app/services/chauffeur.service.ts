@@ -22,9 +22,9 @@ export class ChauffeurService {
   // update(id: any, data: any): Observable<any> {
   //   return this.http.put(`${baseUrl}/${id}`, data);
   // }
-  // delete(id: any): Observable<any> {
-  //   return this.http.delete(`${baseUrl}/${id}`);
-  // }
+  delete(id: any){
+    return this.http.delete(`${baseUrl}depanneur/del/${id}`);
+  }
   // deleteAll(): Observable<any> {
   //   return this.http.delete(baseUrl);
   // }

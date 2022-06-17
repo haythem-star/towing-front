@@ -24,7 +24,7 @@ export class CamionserviceService {
     return this.http.put(`${baseUrl}camion/${id}`, data);
   }
   delete(id: any): Observable<any> {
-    return this.http.delete(`${baseUrl}camion/${id}`);
+    return this.http.delete(`${baseUrl}camion/del/${id}`);
   }
   deleteAll(): Observable<any> {
     return this.http.delete(baseUrl+'camions');

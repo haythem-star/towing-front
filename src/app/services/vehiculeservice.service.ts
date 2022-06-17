@@ -23,7 +23,7 @@ export class VehiculeserviceService {
     return this.http.put(`${baseUrl}voiture/${id}`, data);
   }
   delete(id: any): Observable<any> {
-    return this.http.delete(`${baseUrl}voiture/${id}`);
+    return this.http.delete(`${baseUrl}voiture/del/${id}`);
   }
   deleteAll(): Observable<any> {
     return this.http.delete(baseUrl+'voitures');
