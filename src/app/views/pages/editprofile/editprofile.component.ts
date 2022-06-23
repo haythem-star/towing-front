@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/model/user';
 import { UserserviceService } from 'src/app/services/userservice.service';
 import { FormsModule } from '@angular/forms';
@@ -23,13 +23,15 @@ export class EditProfileComponent implements OnInit {
   name: any;
   username: any;
   user = new User();
+ 
   //user:any;
   constructor(
     private route: ActivatedRoute,
     private userservice: UserserviceService,
     private camionservice: CamionserviceService,
     private chauffeurservice : ChauffeurService,
-    private voitureservice : VehiculeserviceService
+    private voitureservice : VehiculeserviceService,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
@@ -49,7 +51,7 @@ export class EditProfileComponent implements OnInit {
       this.getVoitureData()
     }
     
-    // this.updateEmployee();
+     this.updateEmployee();
   }
 
   getChauffeurData(){
@@ -116,7 +118,7 @@ export class EditProfileComponent implements OnInit {
    updateEmployee() {
     this.userservice.UpdateUser(this.id, this.user).subscribe((res) => {});
    }
-  update(){
-    
+   annuler(){
+    this.router.navigate(['admin']);
   }
 }
