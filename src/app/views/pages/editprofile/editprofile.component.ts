@@ -113,9 +113,9 @@ export class EditProfileComponent implements OnInit {
     });
   }
 
-  // updateEmployee() {
-  //   this.userservice.UpdateUser(this.id, this.user).subscribe((res) => {});
-  // }
+   updateEmployee() {
+    this.userservice.UpdateUser(this.id, this.user).subscribe((res) => {});
+   }
   update(){
     
   }
