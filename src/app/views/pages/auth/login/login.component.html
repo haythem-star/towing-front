@@ -12,15 +12,15 @@
             <form class="forms-sample" (ngSubmit)="submit()" [formGroup]="form">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email </label>
-                <input type="text" formControlName="email" name="email" class="form-control"
-                placeholder="Entrer email" [ngClass]="{'is-invalid': submitted && f.email.errors}">
+                <input type="text" formControlName="username" name="username" class="form-control"
+                placeholder="Entrer email" [ngClass]="{'is-invalid': submitted && f.username.errors}">
 
-                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                  <div *ngIf="f.email.errors.required">
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                  <div *ngIf="f.username.errors.required">
                    E-mail est requis
 
                   </div>
-                  <div *ngIf="f.email.errors.email">
+                  <div *ngIf="f.username.errors.email">
                     L'e-mail doit être une adresse e-mail valide
                    </div>
               </div>

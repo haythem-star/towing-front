@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
     loginForm(){
       this.form = this.formBuilder.group({
-        email: ['', [Validators.required, Validators.email]],
+        username: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required]]
       })
     }
@@ -39,26 +39,26 @@ export class LoginComponent implements OnInit {
     if(this.form.invalid) {
       return;
     }
-    // console.log(this.form.value);
+    console.log(this.form.value);
     
-    // this.dataService.login(this.form.value).subscribe(res => {
-    //   this.data = res;
-    //   if(this.data.status === 1 ) {
-    //     this.token = this.data.data.token;
-    //     this.user = this.data.user;
-    //     localStorage.setItem('token', this.token);
-    //     localStorage.setItem('user', this.user);
-    //     console.log(this.user);
-    //     this.router.navigate(['/login']);
+    this.dataService.login(this.form.value).subscribe(res => {
+      this.data = res;
+      if(this.data.status === 1 ) {
+        this.token = this.data.data.token;
+        this.user = this.data.user;
+        localStorage.setItem('token', this.token);
+        localStorage.setItem('user', this.user);
+        console.log(this.user);
+        this.router.navigate(['/admin']);
    
 
 
-    //   } else if(this.data.status === 0){
+      } else if(this.data.status === 0){
 
 
-    //   }
-    // });
-    this.router.navigate(['/admin'])
+      }
+    });
+    // this.router.navigate(['/admin'])
   }
 
 }
