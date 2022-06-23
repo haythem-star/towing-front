@@ -49,7 +49,7 @@ id:any;
     return this.httpClient.get(environment.apiUrl+'api/client/'+ id);
   }
 UpdateUser(id:any, data:any) {
-    return this.httpClient.post(environment.apiUrl+'/update/' + id, data );
+    return this.httpClient.put(environment.apiUrl+'api/client/' + id, data );
   }
  DeleteUser(id: any) {
     return this.httpClient.delete(environment.apiUrl+'api/client/del/'+ id );
