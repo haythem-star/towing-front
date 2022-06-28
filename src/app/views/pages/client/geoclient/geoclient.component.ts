@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { DemandeService } from 'src/app/services/demande.service';
+import { NgbToastHeader } from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-geoclient',
   templateUrl: './geoclient.component.html',
@@ -8,6 +13,27 @@ import * as L from 'leaflet';
 export class GeoClientComponent implements OnInit {
   title = 'locationApp';
   latLong: any;
+  lat: any;
+  long: any;
+  form:FormGroup;
+  submitted = false;
+  data:any;
+  NgbToastHeader: any;
+  constructor(private formBuilder: FormBuilder,private router:Router, private demandeservice:DemandeService) { }
+
+
+  createForm() {
+    this.form = this.formBuilder.group({
+      latitude: ['', Validators.required],
+      longitude: ['', Validators.required],
+      acceptation: ["true", Validators.required],
+     
+    
+   
+
+    },
+  );
+  }
 
   ngOnInit() {
     if (!navigator.geolocation) {
@@ -16,6 +42,8 @@ export class GeoClientComponent implements OnInit {
     navigator.geolocation.getCurrentPosition((position) => {
       const coords = position.coords;
     this.latLong = [coords.latitude, coords.longitude];
+    this.lat = [coords.latitude];
+    this.long = [coords.longitude];
       console.log(
         `lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`
       );
@@ -47,7 +75,7 @@ export class GeoClientComponent implements OnInit {
       marker.bindPopup(`<center>
       <p>
          <strong>Demande De Remorquage</strong></p></center>
-   <a class="btn btn-primary" type="button"  href="https://www.google.com/maps/@33.9183866,8.1224174,13z">Google Maps</a>
+   <a class="btn btn-primary" type="button" href="https://www.google.com/maps/@33.9183866,8.1224174,13z">Google Maps</a> 
        `).openPopup();
 
       let popup = L.popup()
@@ -56,6 +84,7 @@ export class GeoClientComponent implements OnInit {
         .openOn(mapclient);
     });
     this.watchPosition();
+    this.createForm();
   }
 
   watchPosition() {
@@ -80,4 +109,51 @@ export class GeoClientComponent implements OnInit {
       }
     );
   }
+
+  get f() {
+    return this.form.controls;
+  }
+
+  submit() {
+    this.submitted = true;
+    if(this.form.invalid) {
+      return;
+    }
+
+    this.demandeservice.EnvoyerDemandes(this.form.value).subscribe(res => {
+
+      this.data = res;
+      console.log(this.form);
+      console.log(this.form.value);
+      if(this.data.status === 1 ) {
+
+        this.router.navigate(['/client']);
+       
+
+      }
+      else if(this.data.status === 0 ) {
+        this.NgbToastHeader.error(JSON.stringify(this.data.message), JSON.stringify(this.data.code),
+        {
+          timeOut: 2000,
+          progressBar: true
+        });
+      
+
+      }
+
+     
+     this.submitted = false;
+    /* this.form.get('mvehicule').reset();
+     this.form.get('panne').reset();
+     this.form.get('nombre_personne').reset();
+     this.form.get('dateSaisie').reset();
+     this.form.get('id_user').reset();
+     this.form.get('lat').reset();
+     this.form.get('long').reset();*/
+
+    });
+
+  }
 }
+
+

@@ -1,1 +1,58 @@
 <div id="mapclient"></div>
+
+
+  
+  <div class="row">
+    <div class="col-md-12 grid-margin">
+      <div class="card">
+        <div class="card-body">
+          <form (ngSubmit)="submit()" >
+         
+
+           
+              <!----  <div class="col-md-6">
+               
+               
+                    <label class="col-md-3 col-form-label text-md-right" for="panne" >Panne</label>
+                    <div class="col-md-6">
+                    <select type="text" formControlName="panne" name="panne" class="form-select"
+                    placeholder="Enter panne" >
+                    <option  value="" selected id="disabled">-- Choisie Panne --</option>
+          
+                    <option>Accident</option>
+                    <option>Panne Freins/ Embrayage</option>
+                    <option >Panne Carburan</option>
+                    <option>Remorquage</option>
+                    <option >Crevasion</option>
+                    <option >Autre</option>
+                  </select>
+        
+                  </div>
+              </div>
+                  </div> -->
+               
+                
+        
+
+              <div class="row mb-3">
+                <div class="form-group">
+                <div class="col">
+                  <label class="form-label" >Lat:</label>
+                  <input class="form-control mb-4 mb-md-0" formControlName="latitude" type="text" name="latitude" >
+                </div>
+              </div>
+                <div class="form-group">
+                <div class="col-md-6">
+                  <label class="form-label" >Long:</label>
+                  <input class="form-control" formControlName="longitude" name="longitude" type="text"   />
+                </div>
+              </div>
+                
+             
+            </div>
+              <button type="submit"  class="btn btn-primary">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

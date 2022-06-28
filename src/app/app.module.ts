@@ -83,6 +83,9 @@ import { EditVoitureComponent } from './views/pages/edit-voiture/edit-voiture.co
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
 
 
   ],

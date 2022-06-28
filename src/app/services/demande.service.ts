@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { id } from '@swimlane/ngx-datatable';
 // import { Camion } from '../model/camion';
 
 const baseUrl = 'http://localhost:8000/api/demandes';
+const baseUrl2 = 'http://localhost:8000/api/demande';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,9 +15,14 @@ export class DemandeService {
   getAll(){
     return this.http.get(baseUrl);
   }
-  // get(id: any): Observable<Camion> {
-  //   return this.http.get(`${baseUrl}/${id}`);
-  // }
+  
+  getdemandeByid(id: any) {
+   return this.http.get(baseUrl2+'/'+ id);
+  }
+
+  EnvoyerDemandes(data: any){
+    return this.http.post(baseUrl2 +'/api/demande/', data );
+  }
   // create(data: any): Observable<any> {
   //   return this.http.post(baseUrl, data);
   // }

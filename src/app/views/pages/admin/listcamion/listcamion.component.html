@@ -25,6 +25,7 @@
                 <th>Modele</th>
                 <th>Matricule</th>
                 <th>Couleur</th>
+                <th>Etat</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -34,6 +35,10 @@
               <td>{{camion.modele}}</td>
               <td>{{camion.matricule}}</td>
               <td>{{camion.couleur}}</td>
+              <label class="switch">
+                <input type="checkbox" >
+                <span class="slider"></span>
+              </label>
          
               <td>
                 <button  class="btn btn-sm btn-info"> <i id="myicon1" class="fa fa-search"></i>Details</button>
