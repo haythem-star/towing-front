@@ -137,6 +137,8 @@ export class GeoClientComponent implements OnInit {
           timeOut: 2000,
           progressBar: true
         });
+        console.log("error en envoyant demande ");
+        
       
 
       }
