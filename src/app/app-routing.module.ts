@@ -55,7 +55,7 @@ const routes: Routes = [
  {
   path: 'client',
   component: BaseClientComponent,
-  canActivate: [AuthGuard],
+  // canActivate: [AuthGuard],
   children: [
     {
       path: '',
@@ -73,7 +73,7 @@ const routes: Routes = [
  {
   path: 'admin',
   component: BaseAdminComponent,
-  canActivate: [AuthGuard],
+  // canActivate: [AuthGuard],
   children: [
     {
       path: '',
