@@ -40,6 +40,7 @@ import { EditClientComponent } from './views/pages/edit-client/edit-client.compo
 import { EditChauffeurComponent } from './views/pages/edit-chauffeur/edit-chauffeur.component';
 import { EditVoitureComponent } from './views/pages/edit-voiture/edit-voiture.component';
 import { EditUserProfileComponent } from './views/pages/edit-user-profile/edit-user-profile.component';
+import { GeoClientComponent } from './views/pages/client/geoclient/geoclient.component';
 
 
 
@@ -73,6 +74,7 @@ import { EditUserProfileComponent } from './views/pages/edit-user-profile/edit-u
     EditChauffeurComponent,
     EditVoitureComponent,
     EditUserProfileComponent,
+    GeoClientComponent
 
   ],
   imports: [
