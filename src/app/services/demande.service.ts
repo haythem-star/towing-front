@@ -21,7 +21,7 @@ export class DemandeService {
   }
 
   EnvoyerDemandes(data: any){
-    return this.http.post(baseUrl2 +'/api/demande/', data );
+    return this.http.post(baseUrl2 , data );
   }
   // create(data: any): Observable<any> {
   //   return this.http.post(baseUrl, data);
