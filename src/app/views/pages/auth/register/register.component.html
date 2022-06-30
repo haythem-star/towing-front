@@ -3,7 +3,9 @@
     <div class="card">
       <div class="row">
         <div class="col-md-4 pe-md-0">
-         
+          <div class="auth-side-wrapper" [ngStyle]="{ 'background-image': 'url(https://media.discordapp.net/attachments/937990478035570722/992150514949161110/unknown.png)' }">
+
+          </div>
         </div>
         <div class="col-md-8 ps-md-0">
           <div class="auth-form-wrapper px-4 py-5">
@@ -66,13 +68,12 @@
                    </div>
               </div></div>
 
-              <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="authCheck">
-                <label class="form-check-label" for="authCheck">
-                Souviens-moi
-                </label>
-              </div>
              
+              <div>
+                <button type="submit" class="btn btn-primary me-2 mb-2 mb-md-0" > S'inscrire
+                </button>
+               
+              </div>
               
               <a routerLink="/auth/login" class="d-block mt-3 text-muted">Déjà utilisateur ? Se connecter</a>
             </form>
