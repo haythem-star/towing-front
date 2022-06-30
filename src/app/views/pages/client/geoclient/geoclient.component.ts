@@ -142,7 +142,7 @@ export class GeoClientComponent implements OnInit {
       
 
       }
-      this.router.navigate(['/client']);
+      
 
      
      this.submitted = false;
@@ -155,6 +155,7 @@ export class GeoClientComponent implements OnInit {
      this.form.get('long').reset();*/
 
     });
+    this.router.navigate(['/client']);
 
   }
 }
