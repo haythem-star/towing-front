@@ -116,9 +116,9 @@ export class GeoClientComponent implements OnInit {
 
   submit() {
     this.submitted = true;
-    if(this.form.invalid) {
-      return;
-    }
+    // if(this.form.invalid) {
+    //   return;
+    // }
 
     this.demandeservice.EnvoyerDemandes(this.form.value).subscribe(res => {
 
