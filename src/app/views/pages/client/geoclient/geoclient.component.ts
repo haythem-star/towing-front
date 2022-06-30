@@ -127,7 +127,7 @@ export class GeoClientComponent implements OnInit {
       console.log(this.form.value);
       if(this.data.status === 1 ) {
 
-        this.router.navigate(['/client']);
+        // this.router.navigate(['/client']);
        
 
       }
@@ -142,6 +142,7 @@ export class GeoClientComponent implements OnInit {
       
 
       }
+      this.router.navigate(['/client']);
 
      
      this.submitted = false;
