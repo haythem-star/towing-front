@@ -7,28 +7,29 @@ import { CamionserviceService } from 'src/app/services/camionservice.service';
 import { ChauffeurService } from 'src/app/services/chauffeur.service';
 import { VehiculeserviceService } from 'src/app/services/vehiculeservice.service';
 @Component({
-  selector: 'app-editprofile',
-  templateUrl: './editprofile.component.html',
-  styleUrls: ['./editprofile.component.scss'],
+  selector: 'app-edit-user-profile',
+  templateUrl: './edit-user-profile.component.html',
+  styleUrls: ['./edit-user-profile.component.scss']
 })
 export class EditUserProfileComponent implements OnInit {
+
   id: any;
   data: any;
   email: any;
-  password: any;
-  oldPassword: any;
+  password : any
+  oldPassword : any
   //user:any;
   constructor(
     private route: ActivatedRoute,
     private userservice: UserserviceService,
     private camionservice: CamionserviceService,
-    private chauffeurservice: ChauffeurService,
-    private voitureservice: VehiculeserviceService
+    private chauffeurservice : ChauffeurService,
+    private voitureservice : VehiculeserviceService
   ) {}
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
-
+    
     // this.updateEmployee();
   }
 
@@ -47,8 +48,11 @@ export class EditUserProfileComponent implements OnInit {
   //   });
   // }
 
-  updateEmployee() {
+   updateEmployee() {
     // this.userservice.UpdateUser(this.id, this.user).subscribe((res) => {});
+   }
+  update(){
+    
   }
-  update() {}
+
 }
