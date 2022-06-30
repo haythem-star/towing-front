@@ -11,24 +11,24 @@ import { VehiculeserviceService } from 'src/app/services/vehiculeservice.service
   templateUrl: './editprofile.component.html',
   styleUrls: ['./editprofile.component.scss'],
 })
-export class EditProfileComponent implements OnInit {
+export class EditUserProfileComponent implements OnInit {
   id: any;
   data: any;
   email: any;
-  password : any
-  oldPassword : any
+  password: any;
+  oldPassword: any;
   //user:any;
   constructor(
     private route: ActivatedRoute,
     private userservice: UserserviceService,
     private camionservice: CamionserviceService,
-    private chauffeurservice : ChauffeurService,
-    private voitureservice : VehiculeserviceService
+    private chauffeurservice: ChauffeurService,
+    private voitureservice: VehiculeserviceService
   ) {}
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
-    
+
     // this.updateEmployee();
   }
 
@@ -47,11 +47,8 @@ export class EditProfileComponent implements OnInit {
   //   });
   // }
 
-   updateEmployee() {
+  updateEmployee() {
     // this.userservice.UpdateUser(this.id, this.user).subscribe((res) => {});
-   }
-  update(){
-    
   }
+  update() {}
 }
-

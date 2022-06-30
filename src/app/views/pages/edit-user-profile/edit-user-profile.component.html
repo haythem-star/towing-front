@@ -1,0 +1,60 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Admin</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Edit Profile</li>
+  </ol>
+</nav>
+<div class="row"></div>
+<div class="col-md-6 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h6 class="card-title">Edit Profile</h6>
+      <form (ngSubmit)="updateEmployee()" class="forms-sample">
+        <div class="form-group row">
+          <label for="name" class="col-md-3 col-form-label text-md-right"
+            >Email :</label
+          >
+          <div class="col-md-6">
+            <input
+              type="text"
+              name="email"
+              class="form-control"
+              [(ngModel)]="email"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="name" class="col-md-3 col-form-label text-md-right"
+            >Old Password:</label
+          >
+          <div class="col-md-6">
+            <input
+              type="text"
+              name="oldp"
+              class="form-control"
+              [(ngModel)]="oldp"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="name" class="col-md-3 col-form-label text-md-right"
+            >New Password:</label
+          >
+          <div class="col-md-6">
+            <input
+              type="text"
+              name="newp"
+              class="form-control"
+              [(ngModel)]="newp"
+            />
+          </div>
+        </div>
+
+        <button class="btn btn-primary me-2">
+          <a routerLink="/admin" type="button"> Enregistrer </a>
+        </button>
+        <button class="btn btn-secondary">Annuler</button>
+      </form>
+    </div>
+  </div>
+</div>

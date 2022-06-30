@@ -39,6 +39,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditClientComponent } from './views/pages/edit-client/edit-client.component';
 import { EditChauffeurComponent } from './views/pages/edit-chauffeur/edit-chauffeur.component';
 import { EditVoitureComponent } from './views/pages/edit-voiture/edit-voiture.component';
+import { EditUserProfileComponent } from './views/pages/edit-user-profile/edit-user-profile.component';
 
 
 
@@ -71,6 +72,7 @@ import { EditVoitureComponent } from './views/pages/edit-voiture/edit-voiture.co
     EditClientComponent,
     EditChauffeurComponent,
     EditVoitureComponent,
+    EditUserProfileComponent,
 
   ],
   imports: [
