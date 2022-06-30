@@ -42,21 +42,24 @@ data:any;
     if(this.form.invalid) {
       return;
     }
-    this.dataService.registerUser(this.form.value).subscribe(res => {
-      this.data = res;
-      if(this.data.status === 1 ) {
-        this.router.navigate(['/']);
+
+    this.router.navigate(['/auth/login']);
+
+  //   this.dataService.registerUser(this.form.value).subscribe(res => {
+  //     this.data = res;
+  //     if(this.data.status === 1 ) {
+  //       this.router.navigate(['/']);
 
 
-      } else if(this.data.status === 0){
+  //     } else if(this.data.status === 0){
 
-      }
-     this.submitted = false;
-   /*  this.form.get('name').reset();
-     this.form.get('email').reset();
-     this.form.get('password').reset();
-     this.form.get('confirmPassword').reset();*/
+  //     }
+  //    this.submitted = false;
+  //  /*  this.form.get('name').reset();
+  //    this.form.get('email').reset();
+  //    this.form.get('password').reset();
+  //    this.form.get('confirmPassword').reset();*/
 
-    });
+  //   });
   }
 }
