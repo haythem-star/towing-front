@@ -120,44 +120,42 @@ export class GeoClientComponent implements OnInit {
     //   return;
     // }
 
-    this.demandeservice.EnvoyerDemandes(this.form.value).subscribe(res => {
+    // this.demandeservice.EnvoyerDemandes(this.form.value).subscribe(res => {
 
-      this.data = res;
-      console.log(this.form);
-      console.log(this.form.value);
-      if(this.data.status === 1 ) {
+    //   this.data = res;
+    //   console.log(this.form);
+    //   console.log(this.form.value);
+    //   if(this.data.status === 1 ) {
 
-        // this.router.navigate(['/client']);
+    //     // this.router.navigate(['/client']);
        
 
-      }
-      else if(this.data.status === 0 ) {
-        this.NgbToastHeader.error(JSON.stringify(this.data.message), JSON.stringify(this.data.code),
-        {
-          timeOut: 2000,
-          progressBar: true
-        });
-        console.log("error en envoyant demande ");
+    //   }
+    //   else if(this.data.status === 0 ) {
+    //     this.NgbToastHeader.error(JSON.stringify(this.data.message), JSON.stringify(this.data.code),
+    //     {
+    //       timeOut: 2000,
+    //       progressBar: true
+    //     });
+    //     console.log("error en envoyant demande ");
         
       
 
-      }
+    //   }
       
 
-     
-     this.submitted = false;
-    /* this.form.get('mvehicule').reset();
-     this.form.get('panne').reset();
-     this.form.get('nombre_personne').reset();
-     this.form.get('dateSaisie').reset();
-     this.form.get('id_user').reset();
-     this.form.get('lat').reset();
-     this.form.get('long').reset();*/
+    
+    //  this.submitted = false;
+    // /* this.form.get('mvehicule').reset();
+    //  this.form.get('panne').reset();
+    //  this.form.get('nombre_personne').reset();
+    //  this.form.get('dateSaisie').reset();
+    //  this.form.get('id_user').reset();
+    //  this.form.get('lat').reset();
+    //  this.form.get('long').reset();*/
 
-    });
+    // });
     this.router.navigate(['/client/historique']);
 
   }
 }
-
-
