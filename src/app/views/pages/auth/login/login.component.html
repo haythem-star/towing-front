@@ -10,12 +10,12 @@
         <div class="col-md-8 ps-md-0">
           <div class="auth-form-wrapper px-4 py-5">
             <a routerLink="." class="nobleui-logo d-block mb-2"><span></span></a>
-            <h5 class="text-muted fw-normal mb-4">Content de te revoir! Connectez-vous à votre compte.</h5>
+            <h5 class="text-muted fw-normal mb-4">Content de vous revoir! Connectez-vous à votre compte.</h5>
             <form class="forms-sample" (ngSubmit)="submit()" [formGroup]="form">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email </label>
                 <input type="text" formControlName="username" name="username" class="form-control"
-                placeholder="Entrer email" [ngClass]="{'is-invalid': submitted && f.username.errors}">
+                placeholder="Adresse Email" [ngClass]="{'is-invalid': submitted && f.username.errors}">
 
                 <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
                   <div *ngIf="f.username.errors.required">
@@ -31,7 +31,7 @@
                 <label for="exampleInputPassword1" class="form-label">Mot de passe
                 </label>
                 <input type="password" formControlName="password" name="password" class="form-control"
-                placeholder="Entrer mot de passe" [ngClass]="{'is-invalid': submitted && f.password.errors}">
+                placeholder="Mot De passe" [ngClass]="{'is-invalid': submitted && f.password.errors}">
 
                 <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                   <div *ngIf="f.password.errors.required">
@@ -54,7 +54,7 @@
                
               </div>
               <a routerLink="/auth/register" class="d-block mt-3 text-muted">
-                Vous n'êtes pas utilisateur ? S'inscrire</a>
+                Vous n'êtes pas un utilisateur? S'inscrire</a>
             </form>
           </div>
         </div>
