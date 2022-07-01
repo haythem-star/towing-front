@@ -102,7 +102,7 @@ const routes: Routes = [
  {
   path: 'chauffeur',
   component: BaseChauffeurComponent,
-  canActivate: [AuthGuard],
+  //canActivate: [AuthGuard],
   children: [
     {
       path: '',

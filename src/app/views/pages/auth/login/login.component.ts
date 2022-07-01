@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
     }
     console.log(this.form.value);
 
-    this.router.navigate(['/admin']);
+    this.router.navigate(['/client']);
     
     // this.dataService.login(this.form.value).subscribe(res => {
     //   this.data = res;

@@ -23,6 +23,9 @@ export class DemandeService {
   EnvoyerDemandes(data: any){
     return this.http.post(baseUrl2 , data );
   }
+  delete(id: any): Observable<any> {
+    return this.http.delete(`${baseUrl}demande/del/${id}`);
+  }
   // create(data: any): Observable<any> {
   //   return this.http.post(baseUrl, data);
   // }

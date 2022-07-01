@@ -155,7 +155,7 @@ export class GeoClientComponent implements OnInit {
      this.form.get('long').reset();*/
 
     });
-    this.router.navigate(['/client/geolocalisation']);
+    this.router.navigate(['/client/historique']);
 
   }
 }
